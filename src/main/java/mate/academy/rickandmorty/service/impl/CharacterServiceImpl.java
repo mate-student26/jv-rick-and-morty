@@ -30,7 +30,7 @@ public class CharacterServiceImpl implements CharacterService {
 
         int pages = firstPage.info().pages();
 
-        for (int i = 1; i <= pages; i++) {
+        for (int i = 2; i <= pages; i++) {
             CharacterResponseDto response = client.getCharacters(i);
 
             characterRepository.saveAll(
